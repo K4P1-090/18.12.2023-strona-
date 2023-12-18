@@ -3,9 +3,22 @@
 @{
 }
 <h2>Prezenty </h2>
-<ol class="list-group">
-        @foreach (var c in Model.Gifts)
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Dla kogo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var gift in Model.Gifts)
         {
-            <li class="list-group-item">@c</li>
+            <tr>
+                <td>@gift.Name</td>
+                <td>@gift.Prize zł</td>
+                <td>@gift.ForWho</td>
+            </tr>
         }
-    </ol>
+    </tbody>
+</table>
