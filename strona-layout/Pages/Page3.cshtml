@@ -3,3 +3,10 @@
 @{
     
 }
+<h2>Zwyczaje świąteczne:</h2>
+    <ol class="list-group">
+        @foreach (var zw in Model.Zwyczaje)
+        {
+            <li class="list-group-item">@zw</li>
+        }
+    </ol>
